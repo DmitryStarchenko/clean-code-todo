@@ -1,25 +1,25 @@
-const js = require("@eslint/js");
-const globals = require("globals");
+import js from '@eslint/js';
+import globals from 'globals';
 
-module.exports = [
+export default [
   {
-    ignores: ["node_modules/**", "dist/**", "coverage/**"],
+    ignores: ['node_modules/**', 'dist/**', 'coverage/**'],
   },
   {
-    files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
+    files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
     ...js.configs.recommended,
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.browser,
         ...globals.es2021,
       },
     },
     rules: {
-      "no-var": "error",
-      "prefer-const": "error",
-      "no-console": "warn",
+      'no-var': 'error',
+      'prefer-const': 'error',
+      'no-console': 'warn',
     },
   },
 ];
