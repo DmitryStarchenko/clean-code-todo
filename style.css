@@ -110,7 +110,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #eee;
   list-style: none;
 }
